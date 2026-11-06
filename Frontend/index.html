@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iraianbu's Document AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>Iraianbu's Doc AI</h1>
+        <p class="brand-subtitle">RAG powered by Gemini + ChromaDB</p>
+      </div>
+
+      <div class="sidebar-section">
+        <label class="sidebar-label" for="pdf-path-input">Index a new PDF</label>
+        <input
+          type="text"
+          id="pdf-path-input"
+          placeholder="Full path to PDF, e.g. D:\docs\file.pdf"
+          autocomplete="off"
+        >
+        <button type="button" id="index-button">Index Document</button>
+        <p id="index-status" class="index-status"></p>
+      </div>
+
+      <div class="sidebar-section">
+        <label class="sidebar-label" for="document-select">Ask questions about</label>
+        <select id="document-select">
+          <option value="">Loading documents...</option>
+        </select>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div id="chat-window" class="chat-window"></div>
+
+      <div class="chat-form">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Ask something about the selected document..."
+          autocomplete="off"
+          required
+        >
+        <button type="button" id="send-button">Ask</button>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
